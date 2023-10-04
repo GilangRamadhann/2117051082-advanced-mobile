@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mola/screens/form_screen.dart';
 import 'package:mola/screens/onboarding_screen.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const onboardingscreen(),
+      home: const FormScreen(),
       //   home: Scaffold(a
       //     body: Center(
       //       child: Text("Test"),
