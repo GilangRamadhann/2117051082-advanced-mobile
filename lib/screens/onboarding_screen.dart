@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:mola/screens/signup_screen.dart';
 
 class onboardingscreen extends StatelessWidget {
   const onboardingscreen({Key? key}) : super(key: key);
@@ -76,9 +75,7 @@ class onboardingscreen extends StatelessWidget {
                             ),
                           ),
 
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen()));
-                          },
+                          onPressed: () {},
 
                           child: Text(
                             'Get Started',

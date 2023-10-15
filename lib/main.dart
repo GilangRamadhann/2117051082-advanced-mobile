@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mola/screens/home_screen.dart';
+import 'package:mola/screens/onboarding_screen.dart';
+import 'package:mola/screens/form_screen.dart';
+import 'package:mola/screens/root_screen.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mola/screens/onboarding_screen.dart';
@@ -35,11 +40,15 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
+        textTheme: GoogleFonts.poppinsTextTheme(),
+
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: const onboardingscreen(),
+
+      home: const RootScreen(),
+
       //   home: Scaffold(a
       //     body: Center(
       //       child: Text("Test"),
