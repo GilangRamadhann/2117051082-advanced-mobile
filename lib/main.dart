@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mola/screens/home_screen.dart';
 import 'package:mola/screens/onboarding_screen.dart';
-import 'package:mola/screens/login_screen.dart';
-import 'package:mola/screens/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: const onboardingscreen(),
+      home: const HomeScreen(),
       //   home: Scaffold(a
       //     body: Center(
       //       child: Text("Test"),
