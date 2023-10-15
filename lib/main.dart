@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mola/screens/onboarding_screen.dart';
 import 'package:mola/screens/login_screen.dart';
 import 'package:mola/screens/signup_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
