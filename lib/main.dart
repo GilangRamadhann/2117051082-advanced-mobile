@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mola/screens/onboarding_screen.dart';
+import 'package:mola/screens/login_screen.dart';
+import 'package:mola/screens/signup_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +37,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: const onboardingscreen(),
       //   home: Scaffold(a
