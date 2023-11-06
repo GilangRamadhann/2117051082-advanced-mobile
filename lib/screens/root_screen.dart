@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mola/screens/form_screen.dart';
 import 'package:mola/screens/home_screen.dart';
+import 'package:mola/screens/transaction_screen.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({super.key});
@@ -13,20 +15,25 @@ class _RootScreenState extends State<RootScreen> {
 
   List<Widget> pages = [
     HomeScreen(),
+    TransactionScreen(),
     Container(
-      color: Colors.green,
+      color: Colors.red,
     ),
     Container(
       color: Colors.blue,
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.red,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.money), label: "Transaction"),
           BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "QR Code"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
