@@ -9,6 +9,7 @@ class FormScreen extends StatefulWidget {
 }
 
 class _FormScreenState extends State<FormScreen> {
+
   TextEditingController emailController = TextEditingController();
   bool isEmailValid = false;
 
@@ -108,3 +109,4 @@ class _FormScreenState extends State<FormScreen> {
     );
   }
 }
+
