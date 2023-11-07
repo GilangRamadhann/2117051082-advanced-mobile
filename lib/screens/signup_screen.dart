@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mola/screens/root_screen.dart';
 import 'package:mola/screens/login_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -9,8 +11,36 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  TextEditingController emailController = TextEditingController();
-  bool isEmailVaid = false;
+  TextEditingController usernameController = TextEditingController();
+  bool isUsernameValid = true;
+  
+  var emailController;
+
+  void setName(String name) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('name', name);
+  }
+
+  void redirect() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (prefs.containsKey('name')) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const RootScreen(),
+        ),
+      );
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    redirect();
+  }
+
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,7 +193,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             MaterialPageRoute(
                                 builder: (context) => LoginScreen()));
                         setState(() {
-                          isEmailVaid = emailController.text.isNotEmpty;
+                          var isEmailVaid = emailController.text.isNotEmpty;
                         });
                       },
                       child: Text(
