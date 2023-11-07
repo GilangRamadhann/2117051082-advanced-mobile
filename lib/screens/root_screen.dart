@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mola/screens/form_screen.dart';
+import 'package:mola/screens/profile_screen.dart';
 import 'package:mola/screens/home_screen.dart';
 import 'package:mola/screens/transaction_screen.dart';
 
@@ -17,25 +18,40 @@ class _RootScreenState extends State<RootScreen> {
     HomeScreen(),
     TransactionScreen(),
     Container(
-      color: Colors.red,
+      color: Colors.blue,
     ),
     Container(
       color: Colors.blue,
     ),
+    ProfileScreen(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.red,
+        unselectedItemColor: Colors.grey,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.money), label: "Transaction"),
-          BottomNavigationBarItem(icon: Icon(Icons.qr_code), label: "QR Code"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.description),
+            label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.qr_code_scanner),
+            label: 'QR Code',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.redeem_outlined),
+            label: 'Rewards',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle_outlined),
+            label: 'Profile',
+          ),
         ],
         currentIndex: _currentIndex,
         onTap: ((value) {

@@ -1,7 +1,17 @@
-class TransactionModel {
-  String? transcationCategory;
-  String? date;
-  double? amount;
+import 'package:flutter/material.dart';
 
-  TransactionModel({this.transcationCategory, this.date, this.amount});
+class TransactionModel {
+  IconData TransactionIcons;
+  String? TransactionCategory;
+  String? TransactionDate;
+  String? TransactionOperator;
+  double? TransactionAmount;
+
+  TransactionModel({
+    required this.TransactionIcons,
+    this.TransactionCategory,
+    this.TransactionDate,
+    this.TransactionOperator,
+    this.TransactionAmount,
+  });
 }
